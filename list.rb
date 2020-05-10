@@ -3,7 +3,8 @@
             # https://github.com/metacoder87/TodoBoard
 
 
-# List
+class List
+
 # An instance of List may contain many items. To do this, our List will have an 
 # underlying array. A list will also have a label.
 
@@ -148,6 +149,8 @@
             def sort_by_date!
 
             end
+
+end
 
             # meta_coder (Gary Miller) =)
             # gmiller052611@gmail.com
