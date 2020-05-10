@@ -51,7 +51,7 @@ class Item
 # This method should return the item's deadline.
 
             def deadline
-
+                @deadline
             end
 
 # Item#deadline=(new_deadline)
@@ -66,7 +66,7 @@ class Item
 # This method should return the item's description.
 
             def description
-
+                @description
             end
 
 # Item#description=(new_description)
