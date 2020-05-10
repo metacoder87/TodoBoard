@@ -2,6 +2,7 @@
             # gmiller052611@gmail.com
             # https://github.com/metacoder87/TodoBoard
 
+            require_relative 'item'
 
 class List
 
@@ -12,23 +13,16 @@ class List
 # This method should accept a label as an argument and store the label of the 
 # list as an instance variable. Also initialize instance variable called items 
 # to an empty array. The array will eventually contain instances ofItem.
-
-            def initialize(label)
-
-            end
-
 # List#label
 # This method should return the list's label.
-
-            def label
-
-            end
-
 # list#label=(new_label)
 # This method should set the list's label.
 
-            def label=(new_label)
+            attr_accessor :label
 
+            def initialize(label)
+                @label = label
+                @items = []
             end
 
 # List#add_item(title, deadline, description)
