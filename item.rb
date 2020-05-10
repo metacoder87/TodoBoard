@@ -9,10 +9,14 @@ class Item
 # This method should accept a string and return a boolean indicating if it is 
 # valid date of the form YYYY-MM-DD where Y, M, and D are numbers, such as 
 # 1912-06-23. The month should be a number from 1 to 12 and the day should be 
-# a number from 1 to 31. Here are examples of the expected behavior:
+# a number from 1 to 31.
 
-            def valid_date?(date_string)
-
+            def self.valid_date?(date_string)
+                chunks = date_string.split('-')
+                if (1900...2021).include?(chunks[0].to_i) && (01..12).include?(chunks[1].to_i) && (01..31).include?(chunks[2].to_i)
+                    return true
+                else false
+            end
             end
 
 # Item#initialize(title, deadline, description)
