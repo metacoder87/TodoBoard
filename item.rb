@@ -44,7 +44,7 @@ class Item
 # This method should set the item's title.
 
             def title=(new_title)
-
+                @title = new_title
             end
 
 # Item#deadline
@@ -59,7 +59,7 @@ class Item
 # a valid date, then it should raise an error and not change the deadline.
 
             def deadline=(new_deadline)
-
+                @deadline = new_deadline
             end
 
 # Item#description
@@ -73,7 +73,7 @@ class Item
 # This method should set the item's description.
 
             def description=(new_description)
-
+                @description = new_description
             end
 
 end
