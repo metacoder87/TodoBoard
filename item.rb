@@ -16,13 +16,25 @@ class Item
                 if (1900...2021).include?(chunks[0].to_i) && (01..12).include?(chunks[1].to_i) && (01..31).include?(chunks[2].to_i)
                     return true
                 else false
-            end
+                end
             end
 
 # Item#initialize(title, deadline, description)
 # This method should accept a title, deadline, and a description as arguments. 
 # These three pieces of data should be stored as instance variables of an Item. 
 # If the deadline is not a valid date, raise an error.
+# Item#title
+# This method should return the item's title.
+# Item#title=(new_title)
+# This method should set the item's title.
+# Item#deadline
+# This method should return the item's deadline.
+# Item#description
+# This method should return the item's description.
+# Item#description=(new_description)
+# This method should set the item's description.
+
+            attr_accessor :title, :description, :deadline
 
             def initialize(title, deadline, description)
                 @title = title
@@ -30,50 +42,18 @@ class Item
                 if valid_date?(deadline)
                     @deadline = deadline
                 else raise "Invalid date format, please enter YYYY-MM-DD."
-            end
-            end
-
-# Item#title
-# This method should return the item's title.
-
-            def title
-                @title
-            end
-
-# Item#title=(new_title)
-# This method should set the item's title.
-
-            def title=(new_title)
-                @title = new_title
-            end
-
-# Item#deadline
-# This method should return the item's deadline.
-
-            def deadline
-                @deadline
-            end
+                end
+            end     
 
 # Item#deadline=(new_deadline)
 # This method should set the item's deadline. However, if the new deadline is not 
 # a valid date, then it should raise an error and not change the deadline.
 
             def deadline=(new_deadline)
-                @deadline = new_deadline
-            end
-
-# Item#description
-# This method should return the item's description.
-
-            def description
-                @description
-            end
-
-# Item#description=(new_description)
-# This method should set the item's description.
-
-            def description=(new_description)
-                @description = new_description
+                if valid_date?(new_deadline)
+                    @deadline = new_deadline
+                else raise "Invalid date format, please enter YYYY-MM-DD."
+                end   
             end
 
 end
