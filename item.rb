@@ -25,7 +25,12 @@ class Item
 # If the deadline is not a valid date, raise an error.
 
             def initialize(title, deadline, description)
-
+                @title = title
+                @description = description
+                if valid_date?(deadline)
+                    @deadline = deadline
+                else raise "Invalid date format, please enter YYYY-MM-DD."
+            end
             end
 
 # Item#title
