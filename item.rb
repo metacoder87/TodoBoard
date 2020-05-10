@@ -3,7 +3,8 @@
             # https://github.com/metacoder87/TodoBoard
 
 
-# Item
+class Item
+
 # Item::valid_date?(date_string)
 # This method should accept a string and return a boolean indicating if it is 
 # valid date of the form YYYY-MM-DD where Y, M, and D are numbers, such as 
@@ -66,6 +67,7 @@
 
             end
 
+end
 
             # meta_coder (Gary Miller) =)
             # gmiller052611@gmail.com
