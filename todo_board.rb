@@ -3,7 +3,8 @@
             # https://github.com/metacoder87/TodoBoard
 
 
-# TodoBoard
+class TodoBoard
+
 # This is where things comes together. The TodoBoard class will be responsible 
 # for receiving user input and performing the correct action on the stored list. 
 # In this phase of the app, the board will only manage a single list. 
@@ -39,6 +40,9 @@
             def run
 
             end
+
+end
+
             # meta_coder (Gary Miller) =)
             # gmiller052611@gmail.com
             # https://github.com/metacoder87/TodoBoard
