@@ -37,7 +37,7 @@ class Item
 # This method should return the item's title.
 
             def title
-
+                @title
             end
 
 # Item#title=(new_title)
