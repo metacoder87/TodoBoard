@@ -56,7 +56,7 @@ class List
 # negative or too large given the current amount of items in the list.
 
             def valid_index?(index)
-
+                (0..@items.count).include?(index)
             end
 
 # Here's some food for thought. This method is similar to Item::valid_date?. 
