@@ -34,8 +34,12 @@ class List
 # item is successfully added, then the method should return true. Don't forget 
 # to require your 'item.rb' file into 'list.rb'.
 
-            def add_item(title, deadline, description)
-
+            def add_item(title, deadline, *description)
+                if Item.valid_date?(deadline)
+                    @items << Item.new(title, deadline, description)
+                    return true
+                else return false
+            end
             end
 
 # List#size
