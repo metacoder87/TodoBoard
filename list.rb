@@ -46,7 +46,7 @@ class List
 # This method should return the number of items currently in the list.
 
             def size
-
+                @items.count
             end
 
 # List#valid_index?(index)
