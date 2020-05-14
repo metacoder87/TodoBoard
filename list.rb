@@ -76,7 +76,11 @@ class List
 # If the indices are valid, then swap the items and return true.
 
             def swap(index_1, index_2)
-
+                if valid_index?(index_1, index_2)
+                    @items[index_1], @items[index_2] = @items[index_2], @items[index_1]
+                    return true
+                else return false
+            end
             end
 
 # Bracket method for list List#[](index)
