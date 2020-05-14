@@ -103,6 +103,8 @@ class List
 # This method should return the item at the the top of the list.
 
             def priority
+                @items[0]
+            end
 
             end
 
