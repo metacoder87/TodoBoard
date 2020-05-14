@@ -106,13 +106,28 @@ class List
                 @items[0]
             end
 
+# List#print
+# This method should print the label of the list and each item's title and deadline. 
+# For usability, also print the position of each item in the list. 
+
+            def print
+                tac_line = "-" * 39
+                puts tac_line
+                puts @label.upcase.rjust(24)
+                puts tac_line
+                puts "Index".ljust(6) + "| Item".ljust(20) + "| Deadline"
+                puts tac_line
+
+                @items.each_with_index do |item, idx|
+                    puts "#{idx}".ljust(6) + "| #{item.title.capitalize}".ljust(20) + "| #{item.deadline}"
+                end
+                puts tac_line
             end
 
 # List#print_full_item(index)
 # This method should print all information for the item at the given index, 
 # including the title, deadline, and description. The method should not print 
-# anything if the index not valid. Here is how we formatted our output for 
-# #print_full_item:
+# anything if the index not valid. 
 
             def print_full_item(index)
 
