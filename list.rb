@@ -56,7 +56,7 @@ class List
 # negative or too large given the current amount of items in the list.
 
             def valid_index?(*index)
-                index.each do |ind| 
+                index.all? do |ind| 
                  (0..@items.count).include?(ind)
             end
             end
