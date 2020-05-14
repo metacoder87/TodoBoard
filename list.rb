@@ -93,7 +93,10 @@ class List
 # manipulate the list according to the rules and methods that we have defined.
 
             def [](index)
-
+                if valid_index?(index)
+                    @items[index]
+                else nil
+                end
             end
 
 # List#priority
