@@ -149,7 +149,7 @@ class List
 # The method should print all information for the item at the top of the list.
 
             def print_priority
-
+                print_full_item(0)
             end
 
 # List#up(index, amount)
