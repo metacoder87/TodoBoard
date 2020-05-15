@@ -2,7 +2,7 @@
             # gmiller052611@gmail.com
             # https://github.com/metacoder87/TodoBoard
 
-            require_relative 'item'
+require_relative 'item'
 
 class List
 
@@ -39,7 +39,7 @@ class List
                     @items << Item.new(title, deadline, description)
                     return true
                 else return false
-            end
+                end
             end
 
 # List#size
@@ -58,7 +58,7 @@ class List
             def valid_index?(*index)
                 index.all? do |ind| 
                  (0..@items.count).include?(ind)
-            end
+                end
             end
 
 # Here's some food for thought. This method is similar to Item::valid_date?. 
@@ -80,7 +80,7 @@ class List
                     @items[index_1], @items[index_2] = @items[index_2], @items[index_1]
                     return true
                 else return false
-            end
+                end
             end
 
 # Bracket method for list List#[](index)
@@ -139,8 +139,8 @@ class List
                 puts tac_line
                 puts "#{item.deadline}".center(fin)
                 if item.description.length > 0
-                puts "#{item.description[0]}".center(fin)
-                puts tac_line
+                    puts "#{item.description[0]}".center(fin)
+                    puts tac_line
                 else puts tac_line
                 end
             end
@@ -162,7 +162,7 @@ class List
 # item up 1 position.
 
             def up(index, amount)
-
+                
             end
 
 # List#down(index, amount)
@@ -175,7 +175,7 @@ class List
 # item down 1 position.
 
             def down(index, amount)
-
+                
             end
 
 # List#sort_by_date!
