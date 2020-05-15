@@ -138,8 +138,11 @@ class List
                 puts "#{item.title.upcase}".center(fin)
                 puts tac_line
                 puts "#{item.deadline}".center(fin)
+                if item.description.length > 0
                 puts "#{item.description[0]}".center(fin)
                 puts tac_line
+                else puts tac_line
+                end
             end
 
 # List#print_priority
