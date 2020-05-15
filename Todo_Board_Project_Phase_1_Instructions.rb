@@ -288,6 +288,7 @@
 
 # [20] pry(main)> my_list[3]
 # => #<Item:0x @title="toothpaste", @deadline="2019-10-25", @description="">
+
 # List#print
 # This method should print the label of the list and each item's title and deadline. 
 # For usability, also print the position of each item in the list. 
