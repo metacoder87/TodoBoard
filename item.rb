@@ -39,7 +39,7 @@ class Item
             def initialize(title, deadline, description)
                 @title = title
                 @description = description
-                if valid_date?(deadline)
+                if self.class.valid_date?(deadline)
                     @deadline = deadline
                 else raise "Invalid date format, please enter YYYY-MM-DD."
                 end
