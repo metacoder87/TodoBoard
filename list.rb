@@ -113,7 +113,7 @@ class List
             def print
                 tac_line = "-" * 39
                 puts tac_line
-                puts @label.upcase.rjust(24)
+                puts @label.upcase.center(39)
                 puts tac_line
                 puts "Index".ljust(6) + "| Item".ljust(20) + "| Deadline"
                 puts tac_line
@@ -130,7 +130,16 @@ class List
 # anything if the index not valid. 
 
             def print_full_item(index)
-
+                item = @items[index]
+                arr = [item.title, item.deadline, item.description].flatten
+                fin = arr.max { |a,b| a.length <=> b.length }.length + 2
+                tac_line = "-" * fin
+                puts tac_line
+                puts "#{item.title.upcase}".center(fin)
+                puts tac_line
+                puts "#{item.deadline}".center(fin)
+                puts "#{item.description[0]}".center(fin)
+                puts tac_line
             end
 
 # List#print_priority
