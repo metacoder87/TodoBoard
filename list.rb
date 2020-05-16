@@ -177,7 +177,9 @@ class List
 # item down 1 position.
 
             def down(index, amount)
-                
+                ele = @items.slice!(index)
+                i = index + amount
+                @items.insert(i, ele)
             end
 
 # List#sort_by_date!
