@@ -187,7 +187,7 @@ class List
 # The method should mutate the list's underlying array.
 
             def sort_by_date!
-
+                @items.sort_by! { |item| item.deadline }
             end
 
 end
