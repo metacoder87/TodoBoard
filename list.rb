@@ -162,7 +162,9 @@ class List
 # item up 1 position.
 
             def up(index, amount)
-                
+                ele = @items.slice!(index)
+                i = index - amount
+                @items.insert(i, ele)
             end
 
 # List#down(index, amount)
