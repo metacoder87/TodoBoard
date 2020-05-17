@@ -33,6 +33,16 @@ class TodoBoard
                 puts "\nEnter a command:"
                 cmd, *args = gets.chomp.split(' ')
 
+                case cmd
+                when 'mktodo'
+                    @list.add_item(*args)
+            end
+                when 'quit'
+                    return false
+                else
+                    puts "\nSorry, that command is not recognized."
+                end
+                true
             end
 
 # TodoBoard#run
