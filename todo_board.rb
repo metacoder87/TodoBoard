@@ -22,7 +22,7 @@ class TodoBoard
 # and store it as an instance variable.
 
             def initialize(label)
-                @label = List.new(label)
+                @list = List.new(label)
             end
 
 # TodoBoard#get_command
