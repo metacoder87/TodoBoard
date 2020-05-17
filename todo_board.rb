@@ -27,10 +27,11 @@ class TodoBoard
 
 # TodoBoard#get_command
 # This method should prompt the user to enter a command and perform the 
-# appropriate action on the list. The user may enter any of the following 
-# commands with arguments separated with spaces:
+# appropriate action on the list.
 
             def get_command
+                puts "\nEnter a command:"
+                cmd, *args = gets.chomp.split(' ')
 
             end
 
