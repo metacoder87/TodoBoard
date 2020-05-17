@@ -81,7 +81,9 @@ class TodoBoard
 # #get_command returns false.
 
             def run
-
+                until get_command == false
+                    get_command
+                end
             end
 
 end
