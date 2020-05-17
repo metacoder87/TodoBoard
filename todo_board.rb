@@ -57,6 +57,17 @@ class TodoBoard
                         @list.print
                     else @list.print_full_item(args.first.to_i)
                     end
+                when 'help'
+                    puts "\nYou may enter one of the following:\n 
+                        mktodo <title> <deadline> <optional description>
+                        down <index> <optional amount>
+                        up <index> <optional amount>
+                        swap <index_1> <index_2>
+                        print <optional index>
+                        priority
+                        sort
+                        help
+                        quit"
                 when 'quit'
                     return false
                 else
