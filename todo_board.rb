@@ -36,7 +36,16 @@ class TodoBoard
                 case cmd
                 when 'mktodo'
                     @list.add_item(*args)
-            end
+                when 'up'
+                    if args.count == 1
+                        @list.up(args.first.to_i, 1)
+                    else @list.up(args.first.to_i, args.last.to_i)
+                    end
+                when 'down'
+                    if args.count == 1
+                        @list.down(args.first.to_i, 1)
+                    else @list.down(args.first.to_i, args.last.to_i)
+                    end
                 when 'quit'
                     return false
                 else
