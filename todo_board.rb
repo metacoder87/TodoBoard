@@ -46,6 +46,12 @@ class TodoBoard
                         @list.down(args.first.to_i, 1)
                     else @list.down(args.first.to_i, args.last.to_i)
                     end
+                when 'swap'
+                    @list.swap(args.first.to_i, args.last.to_i)
+                when 'sort'
+                    @list.sort_by_date!
+                when 'priority'
+                    @list.print_priority
                 when 'quit'
                     return false
                 else
