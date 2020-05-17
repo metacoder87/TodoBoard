@@ -2,6 +2,7 @@
             # gmiller052611@gmail.com
             # https://github.com/metacoder87/TodoBoard
 
+require_relative 'list'
 
 class TodoBoard
 
