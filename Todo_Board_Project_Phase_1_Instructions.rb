@@ -514,6 +514,7 @@
 # 3     | candy                | 2019-10-31
 # ------------------------------------------
 # => nil
+
 # TodoBoard
 # This is where things comes together. The TodoBoard class will be responsible 
 # for receiving user input and performing the correct action on the stored list. 
