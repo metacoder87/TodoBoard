@@ -41,6 +41,12 @@ class TodoBoard
                 lbl = args.slice!(0)
 
                 case cmd
+
+                when 'mklist'
+                    list = List.new(lbl)
+                    @lsts << list
+                    @lists[list.label] = list.items
+
                 when 'mktodo'
                     @list.add_item(*args)
                 when 'up'
