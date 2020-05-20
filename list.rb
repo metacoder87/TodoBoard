@@ -201,6 +201,17 @@ class List
                 @items.sort_by! { |item| item.deadline }
             end
 
+# List#toggle_item(index)
+# This new method should "flip" the current state the item. That is, if the item 
+# is done, then change it to not done; if it is not done, then change it to done
+# We need to fully integrate this new feature into our app. Create a corresponding 
+# List#toggle_item(index) and modify TodoBoard#get_command to allow a user to 
+# utilize this new feature with the input command toggle <index>.
+            
+            def toggle_item(index)
+                @items[index].toggle
+            end
+
 end
 
             # meta_coder (Gary Miller) =)
