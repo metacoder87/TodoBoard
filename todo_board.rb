@@ -75,7 +75,8 @@ class TodoBoard
                     @lsts.select { |ele| ele.sort_by_date! if ele.label == lbl }
 
                 when 'priority'
-                    @list.print_priority
+                    @lsts.select { |ele| ele.print_priority if ele.label == lbl }
+
                 when 'print'
                     if args.empty?
                         @list.print
