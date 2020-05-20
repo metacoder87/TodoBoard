@@ -54,7 +54,8 @@ class TodoBoard
                     @lsts.each { |ele| ele.print }
 
                 when 'mktodo'
-                    @list.add_item(*args)
+                    @lsts.select { |ele| ele.add_item(*args) if ele.label == lbl }
+
                 when 'up'
                     if args.count == 1
                         @list.up(args.first.to_i, 1)
