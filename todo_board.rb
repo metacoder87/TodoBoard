@@ -95,6 +95,9 @@ class TodoBoard
                 when 'quit'
                     return false
 
+                when 'hash'
+                    puts @lists
+
                 when 'help'
                     puts "\nYou may enter one of the following:\n 
                         mktodo <title> <deadline> <optional description>
