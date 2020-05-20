@@ -92,6 +92,9 @@ class TodoBoard
                 when 'purge'
                     @lsts.select { |ele| ele.purge if ele.label == lbl }
 
+                when 'quit'
+                    return false
+
                 when 'help'
                     puts "\nYou may enter one of the following:\n 
                         mktodo <title> <deadline> <optional description>
