@@ -47,6 +47,9 @@ class TodoBoard
                     @lsts << list
                     @lists[list.label] = list.items
 
+                when 'ls'
+                    puts @lists.keys
+
                 when 'mktodo'
                     @list.add_item(*args)
                 when 'up'
