@@ -79,9 +79,10 @@ class TodoBoard
 
                 when 'print'
                     if args.empty?
-                        @list.print
-                    else @list.print_full_item(args.first.to_i)
+                         @lsts.select { |ele| ele.print if ele.label == lbl }
+                    else @lsts.select { |ele| ele.print_full_item(args.first.to_i) if ele.label == lbl }
                     end
+
                 when 'help'
                     puts "\nYou may enter one of the following:\n 
                         mktodo <title> <deadline> <optional description>
