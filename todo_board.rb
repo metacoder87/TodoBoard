@@ -21,8 +21,9 @@ class TodoBoard
 # For now, a TodoBoard will only need create a single List with the given label 
 # and store it as an instance variable.
 
-            def initialize(label)
-                @list = List.new(label)
+            def initialize
+                @lists = Hash.new()
+                @lsts = []
             end
 
 # TodoBoard#get_command
