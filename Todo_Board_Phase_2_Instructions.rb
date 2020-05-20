@@ -11,7 +11,9 @@
 # deleting items
 # managing multiple lists in a single board
 # Extending items and lists
+
 # Item#initialize(title, deadline, description)
+
 # Refactor this existing method to also initialize a boolean instance variable to 
 # track whether or not the item is "done". An item should be not "done" by default.
 
@@ -157,7 +159,7 @@
 # Now it's time for the big one! We've been following some important object 
 # oriented practices up until this point and now it's time to get the pay-off. 
 # Our goal is to now manage multiple Lists in our TodoBoard. Because we have 
-# separated our the logic wisely thus far, we should only have to modify our boards.
+# separated our logic wisely thus far, we should only have to modify our boards.
 
 # TodoBoard#initialize
 
