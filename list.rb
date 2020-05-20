@@ -212,6 +212,21 @@ class List
                 @items[index].toggle
             end
 
+# List#remove_item(index)
+# This method should permanently delete the item of the list at the given index. 
+# If the index is invalid, the method should return false. If the deletion is 
+# successful, then the method should return true. Implement this method so that 
+# there are no awkward gaps in the list after an item is removed. Allow a user to 
+# utilize this new feature by supporting the input command rm <index>.
+
+            def remove_item(index)
+                if valid_index?(index)
+                    @items.slice!(index)
+                    return true
+                else return false
+                end
+            end
+
 end
 
             # meta_coder (Gary Miller) =)
