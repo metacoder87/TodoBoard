@@ -83,6 +83,9 @@ class TodoBoard
                     else @lsts.select { |ele| ele.print_full_item(args.first.to_i) if ele.label == lbl }
                     end
 
+                when 'toggle'
+                    @lsts.select { |ele| ele.toggle_item(args.first.to_i) if ele.label == lbl }
+
                 when 'help'
                     puts "\nYou may enter one of the following:\n 
                         mktodo <title> <deadline> <optional description>
