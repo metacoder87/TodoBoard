@@ -49,7 +49,16 @@ class Item
                 @done = false
             end
             
-            end     
+# Item#toggle, List#toggle_item(index)
+# This new method should "flip" the current state the item. That is, if the item 
+# is done, then change it to not done; if it is not done, then change it to done.
+
+            def toggle
+                if @done == false
+                    @done = true 
+                else @done = false
+                end
+            end
 
 # Item#deadline=(new_deadline)
 # This method should set the item's deadline. However, if the new deadline is not 
