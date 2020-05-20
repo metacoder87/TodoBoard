@@ -109,17 +109,22 @@ class List
 # List#print
 # This method should print the label of the list and each item's title and deadline. 
 # For usability, also print the position of each item in the list. 
+# Since our items contains a new field, update the output of these methods to also 
+# print out a column indicating whether or not the item is done.
 
             def print
-                tac_line = "-" * 39
+                tac_line = "-" * 46
                 puts tac_line
-                puts @label.upcase.center(39)
+                puts @label.upcase.center(46)
                 puts tac_line
-                puts "Index".ljust(6) + "| Item".ljust(20) + "| Deadline"
+                puts "Index".ljust(6) + "| Item".ljust(20) + "| Deadline".ljust(14) + "| Done"
                 puts tac_line
 
                 @items.each_with_index do |item, idx|
-                    puts "#{idx}".ljust(6) + "| #{item.title.capitalize}".ljust(20) + "| #{item.deadline}"
+                    if item.done
+                    puts "#{idx}".ljust(6) + "| #{item.title.capitalize}".ljust(20) + "| #{item.deadline}".ljust(14) + "| [✓]"
+                    else puts "#{idx}".ljust(6) + "| #{item.title.capitalize}".ljust(20) + "| #{item.deadline}".ljust(14) + "| [ ]"
+                    end
                 end
                 puts tac_line
             end
