@@ -104,13 +104,18 @@ class TodoBoard
                         down <index> <optional amount>
                         up <index> <optional amount>
                         swap <index_1> <index_2>
+                        mklist <new_list_label>
                         print <optional index>
                         priority
+                        showall
+                        toggle
+                        purge
                         sort
                         help
-                        quit"
-                when 'quit'
-                    return false
+                        quit
+                        hash
+                        rm
+                        ls"
                 else
                     puts "\nSorry, that command is not recognized."
                 end
