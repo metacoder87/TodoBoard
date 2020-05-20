@@ -34,7 +34,10 @@ class Item
 # Item#description=(new_description)
 # This method should set the item's description.
 
-            attr_accessor :title, :description, :deadline
+# Refactor this existing method to also initialize a boolean instance variable to 
+# track whether or not the item is "done". An item should be not "done" by default.
+
+            attr_accessor :title, :description, :deadline, :done
 
             def initialize(title, deadline, description)
                 @title = title
@@ -43,6 +46,9 @@ class Item
                     @deadline = deadline
                 else raise "Invalid date format, please enter YYYY-MM-DD."
                 end
+                @done = false
+            end
+            
             end     
 
 # Item#deadline=(new_deadline)
