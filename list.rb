@@ -18,7 +18,7 @@ class List
 # list#label=(new_label)
 # This method should set the list's label.
 
-            attr_accessor :label
+            attr_accessor :label, :items
 
             def initialize(label)
                 @label = label
