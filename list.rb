@@ -133,6 +133,8 @@ class List
 # This method should print all information for the item at the given index, 
 # including the title, deadline, and description. The method should not print 
 # anything if the index not valid. 
+# Since our items contains a new field, update the output of these methods to also 
+# print out a column indicating whether or not the item is done.
 
             def print_full_item(index)
                 item = @items[index]
@@ -147,6 +149,10 @@ class List
                     puts "#{item.description[0]}".center(fin)
                     puts tac_line
                 else puts tac_line
+                end
+                if item.done
+                    puts "Done [✓]".center(fin)
+                else puts "Undone [ ]".center(fin)
                 end
             end
 
