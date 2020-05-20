@@ -227,6 +227,19 @@ class List
                 end
             end
 
+# List#purge
+# This method should remove all items that are currently marked as done. Correctly 
+# implementing this may be tricky.
+
+            def purge
+                @items.each_with_index do |item, idx| 
+                    remove_item(idx) if item.done
+                        if item.done
+                            remove_item(idx)
+                        end
+                end
+            end
+
 end
 
             # meta_coder (Gary Miller) =)
