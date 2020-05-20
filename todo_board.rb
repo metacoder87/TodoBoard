@@ -30,9 +30,15 @@ class TodoBoard
 # This method should prompt the user to enter a command and perform the 
 # appropriate action on the list.
 
+# The entirety of this new feature has to do with how the user interfaces with 
+# their many lists, so our only task is to refactor this method. It is quite an 
+# interesting refactor though. For our existing commands, the user now needs to 
+# specify which list to apply the action to.
+
             def get_command
                 puts "\nEnter a command:"
                 cmd, *args = gets.chomp.split(' ')
+                lbl = args.slice!(0)
 
                 case cmd
                 when 'mktodo'
