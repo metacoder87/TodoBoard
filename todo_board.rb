@@ -50,6 +50,9 @@ class TodoBoard
                 when 'ls'
                     puts @lists.keys
 
+                when 'showall'
+                    @lsts.each { |ele| ele.print }
+
                 when 'mktodo'
                     @list.add_item(*args)
                 when 'up'
