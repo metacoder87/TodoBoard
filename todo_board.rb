@@ -58,9 +58,10 @@ class TodoBoard
 
                 when 'up'
                     if args.count == 1
-                        @list.up(args.first.to_i, 1)
-                    else @list.up(args.first.to_i, args.last.to_i)
+                        @lsts.select { |ele| ele.up(args.first.to_i, 1) if ele.label == lbl }
+                    else @lsts.select { |ele| ele.up(args.first.to_i, args.last.to_i) if ele.label == lbl }
                     end
+
                 when 'down'
                     if args.count == 1
                         @list.down(args.first.to_i, 1)
